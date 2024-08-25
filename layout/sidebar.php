@@ -4,18 +4,11 @@
     <div class="scroll-sidebar">
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
-            <a class="navbar-brand ms-2" href="dashboard.html">
+            <a class="navbar-brand ms-2" href="dashboard.php">
                 <!-- Logo icon -->
                 <b class="logo-icon">
-                    <!-- Dark Logo icon -->
-                    <img src="plugins/images/logo-icon.png" alt="homepage" />
+                    <img src="gambar/logo-indonesia.png" alt="homepage" />
                 </b>
-                <!--End Logo icon -->
-                <!-- Logo text -->
-                <span class="logo-text">
-                    <!-- dark Logo text -->
-                    <img src="plugins/images/logo-text.png" alt="homepage" />
-                </span>
             </a>
             <ul id="sidebarnav">
                 <!-- User Profile-->
