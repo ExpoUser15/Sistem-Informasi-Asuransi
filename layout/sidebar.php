@@ -1,60 +1,19 @@
-<aside class="left-sidebar pt-3" data-sidebarbg="skin6">
+<?php
+    $page = @$_GET['page'];
+?>
 
-    <!-- Sidebar scroll-->
-    <div class="scroll-sidebar">
-        <!-- Sidebar navigation-->
-        <nav class="sidebar-nav">
-            <a class="navbar-brand ms-2" href="dashboard.php">
-                <!-- Logo icon -->
-                <b class="logo-icon">
-                    <img src="gambar/logo-indonesia.png" alt="homepage" />
-                </b>
-            </a>
-            <ul id="sidebarnav">
-                <!-- User Profile-->
-                <li class="sidebar-item pt-4">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.php"
-                        aria-expanded="false">
-                        <i class="far fa-clock" aria-hidden="true"></i>
-                        <span class="hide-menu">Dashboard</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profil.php"
-                        aria-expanded="false">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <span class="hide-menu">Profil</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="produk.php"
-                        aria-expanded="false">
-                        <i class="fa fa-table" aria-hidden="true"></i>
-                        <span class="hide-menu">Produk</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="galeri.php"
-                        aria-expanded="false">
-                        <i class="fa fa-image" aria-hidden="true"></i>
-                        <span class="hide-menu">Galeri</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="kontak.php"
-                        aria-expanded="false">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span class="hide-menu">Kontak</span>
-                    </a>
-                </li>
-                <li class="text-center p-20 upgrade-btn">
-                    <a href="https://www.wrappixel.com/templates/ampleadmin/"
-                        class="btn d-grid btn-danger text-white" target="_blank">Logout</a>
-                </li>
-            </ul>
-
-        </nav>
-        <!-- End Sidebar navigation -->
+<div class="col-md-3">
+    <div class="list-group">
+        <a href="index.php" class="list-group-item <?php echo empty($page) ? 'active main-color-bg' : '' ?>">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profil
+        </a>
+        <a href="produk.php?page=produk" class="list-group-item <?php echo $page === "produk" ? 'active main-color-bg' : '' ?>"><span class="glyphicon glyphicon-list-alt"
+                aria-hidden="true"></span> Jenis Produk </a>
+        <a href="galeri.php?page=galeri" class="list-group-item <?php echo $page === "galeri" ? 'active main-color-bg' : '' ?>"><span
+                class="glyphicon glyphicon-picture" aria-hidden="true"></span> Galeri </a>
+        <a href="kontak.php?page=kontak" class="list-group-item <?php echo $page === "kontak" ? 'active main-color-bg' : '' ?>"><span class="glyphicon glyphicon-phone"
+                aria-hidden="true"></span> Kontak </a>
+        <a href="daftar.php?page=daftar" class="list-group-item <?php echo $page === "daftar" ? 'active main-color-bg' : '' ?>"><span class="glyphicon glyphicon-pencil"
+                aria-hidden="true"></span> Daftar </a>
     </div>
-    <!-- End Sidebar scroll-->
-</aside>
+</div>

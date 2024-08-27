@@ -1,55 +1,46 @@
-<?php include('struktur/head.php') ?>
-<div class="preloader">
-    <div class="lds-ripple">
-        <div class="lds-pos"></div>
-        <div class="lds-pos"></div>
-    </div>
-</div>
-<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
-    data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
-
-    <?php include('layout/sidebar.php') ?>
-
-    <div class="page-wrapper">
-        <?php include('layout/navbar.php') ?>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="white-box">
-                        <h3 class="box-title">Daftar Kontak</h3>
-                        <div class="table-responsive">
-                            <table class="table text-nowrap">
-                                <thead>
-                                    <tr>
-                                        <th class="border-top-0">#</th>
-                                        <th class="border-top-0">Nama</th>
-                                        <th class="border-top-0">Email</th>
-                                        <th class="border-top-0">Telepon</th>
-                                        <th class="border-top-0">Pesan</th>
-                                        <th class="border-top-0">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Deshmukh</td>
-                                        <td>Prohaska</td>
-                                        <td>0822130903109</td>
-                                        <td>Hey</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="#" class="btn btn-success text-white">Edit</a>
-                                                <a href="#" class="btn btn-danger text-white">Hapus</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+<?php include("struktur/head.php") ?>
+<?php include("layout/navbar.php") ?>
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <?php include("layout/sidebar.php") ?>
+            <div class="col-md-9">
+                <!-- WEBSITE OVERVIEW  -->
+                <div class="panel panel-default">
+                    <div class="panel-heading main-color-bg">
+                        <h3 class="panel-title">Kontak Prudential Sorong</h3>
+                        <h3 class="panel-title">Hubungi Kami</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="d-flex gap-10">
+                            <div class="well dash-box" style="max-width: 900px; overflow: hidden;">
+                                <img src="gambar/Holborn-640x480.jpg" alt=""
+                                    style="object-fit: cover; width: 100%;">
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam id dignissimos
+                                    neque ab hic asperiores, excepturi perferendis velit quo voluptates et illum
+                                    inventore cupiditate culpa. Quod iusto commodi iure quis?</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-10">
+                            <div class="well dash-box" style="max-width: 900px; overflow: hidden;">
+                                <img src="gambar/Holborn-640x480.jpg" alt=""
+                                    style="object-fit: cover; width: 100%;">
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit. Numquam id dignissimos neque ab hic asperiores, excepturi perferendis
+                                    velit quo voluptates et illum inventore cupiditate culpa. Quod iusto commodi
+                                    iure quis?</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<?php include('struktur/footer.php') ?>
+</section>
+
+<?php include("layout/footer.php") ?>
+<?php include("struktur/foot.php") ?>
