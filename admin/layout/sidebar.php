@@ -48,8 +48,8 @@
                     </a>
                 </li>
                 <li class="text-center p-20 upgrade-btn">
-                    <a href="https://www.wrappixel.com/templates/ampleadmin/"
-                        class="btn d-grid btn-danger text-white" target="_blank">Logout</a>
+                    <a href="../action/logout.php"
+                        class="btn d-grid btn-danger text-white">Logout</a>
                 </li>
             </ul>
 

@@ -1,4 +1,6 @@
-<?php include('struktur/head.php') ?>
+<?php 
+include("action/session.php");
+include('struktur/head.php') ?>
 <div class="preloader">
     <div class="lds-ripple">
         <div class="lds-pos"></div>

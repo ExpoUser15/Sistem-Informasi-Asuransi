@@ -8,7 +8,7 @@
                 <ol class="breadcrumb ms-auto">
                     <li><a href="#" class="fw-normal">Dashboard</a></li>
                 </ol>
-                <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
+                <a href="../action/logout.php" 
                     class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Logout</a>
             </div>
         </div>
