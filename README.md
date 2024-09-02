@@ -1,6 +1,6 @@
 ### CARA MENJALANKAN SISTEM
     
-    1. Pada phpmyadmin buat database baru dengan nama db_asuransi, lalu Import file db_asuransi.sql ke database yang sudah dibuat.
+    1. Pada phpmyadmin buat database baru dengan nama db_asuransi, lalu Import file 'db_asuransi.sql' ke database yang sudah dibuat.
     2. Buka 'localhost/asuransi/' untuk membuka halaman pengunjung.
     3. Jika ingin mengakses halaman admin, maka anda harus login terlebih dahulu buka 'localhost/asuransi/login.php'.
     4. Masukan 'Username: admin' dan 'Password: 123'
