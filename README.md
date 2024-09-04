@@ -10,3 +10,13 @@
     1. Pengunjung dapat mengisi form pendaftaran.
     2. Admin dapat melakukan login ke halaman admin.
     3. Jika ada user yang ingin mengakses semua halaman admin seperti dashboard, profil dan lain-lain, tanpa login terlebih dahulu. Maka user tersebut akan langsung di redirect ke halaman login.
+
+### UPDATE KINERJA SISTEM 9/5/2024 12.20
+
+    1. Admin dapat mengelola profil dan struktur organisasi
+    2. Admin dapat mengelola produk
+    3. Pengunjung dapat login dan register (Jika belum punya akun).
+    4. Perbaikan pada pendaftaran dengan menambahkan fitur pilih produk.
+    5. Pengunjung dapat logout dari dashboard pendaftaran.
+    6. Pengunjung dapat melihat informasi produk di menu produk.
+    7. Pengunjung dapat melihat informasi profil, struktur organisasi, kontak dan lain-lain pada halaman home.
