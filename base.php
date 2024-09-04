@@ -1,91 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
-    <meta name="description"
-        content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
-    <meta name="robots" content="noindex,nofollow">
-    <title>Ample Template by WrapPixel</title>
-    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <!-- Custom CSS -->
-    <link href="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/dist/css/style.css"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/form.css">
-    <style>
-        p {
-            font-size: 1.2rem;
-            line-height: 2rem;
-        }
-    </style>
-</head>
-
-<body style="overflow-x: hidden;">
-    <!-- ============================================================== -->
-    <!-- Main wrapper -->
-    <!-- ============================================================== -->
+<?php include("config/db.php"); ?>
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Header part -->
-        <!-- ============================================================== -->
-        <header class="py-3 bg-white position-fixed" style="width: 100%; z-index: 9999;">
-            <div class="container">
-                <!-- Start Header -->
-                <div class="header">
-                    <nav class="navbar navbar-expand-md navbar-light px-0">
-                        <a class="navbar-brand" href="#">
-                            <img src="gambar/Prudential-Logo-horizontal.png" style="width: 150px;" alt="logo">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item pr-3">
-                                    <a href="#home" class="btn btn-custom btn-outline-info btn-lg">Home</a>
-                                </li>
-                                <li class="nav-item pr-3">
-                                    <a href="#profil" class="btn btn-custom btn-outline-info btn-lg">Profil</a>
-                                </li>
-                                <li class="nav-item pr-3">
-                                    <a href="#kontak" class="btn btn-custom btn-outline-info btn-lg">Kontak</a>
-                                </li>
-                                <li class="nav-item pr-3">
-                                    <a href="#" class="btn btn-custom btn-info btn-lg">Produk</a>
-                                </li>
-                                <li class="nav-item pr-3">
-                                    <a href="#" class="btn btn-custom btn-info btn-lg">Galeri</a>
-                                </li>
-                                <li class="nav-item pr-3">
-                                    <a href="#" class="btn btn-custom btn-danger btn-lg">Login</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <!-- End Header -->
-            </div>
-        </header>
-        <!-- ============================================================== -->
-        <!-- Header part -->
-        <!-- ============================================================== -->
-
-        <!-- ============================================================== -->
-        <!-- Page wrapper part -->
-        <!-- ============================================================== -->
+        <?php include('struktur/pengunjung/layout/header.php'); ?>
         <div class="content-wrapper" style="padding-top: 130px;">
-            <!-- ============================================================== -->
-            <!-- Demos part -->
-            <!-- ============================================================== -->
             <section class="spacer bg-light p-0" id="home">
                 <img src="gambar/Homepage-Banner-PRUWell-Health-Desktop-1366x560.jpg" style="width: 100%;" alt="">
             </section>
@@ -101,25 +17,90 @@
                 </div>
             </section>
 
-            <section class="spacer bg-light" id="profil">
-                <div class="container">
-                    <div class="row justify-content-md-center pt-5">
-                        <div class="col-md-5">
-                            <h1 class="text-dark mt-5" style="font-weight: 600;">Profil <span
-                                    class="fw-bold text-danger">Prudential</span></h1>
-                            <p class="mt-4">Didirikan pada tahun 1995, PT Prudential Life Assurance (Prudential
-                                Indonesia) merupakan
-                                bagian dari Prudential plc, sebuah grup perusahaan jasa keuangan terkemuka di Inggris.
-                                Sebagai bagian dari Grup yang berpengalaman lebih dari 175 tahun di industri asuransi
-                                jiwa, Prudential Indonesia memiliki komitmen untuk mengembangkan bisnisnya di Indonesia.
-                            </p>
-                        </div>
-                        <div class="col-md-7">
-                            <img src="gambar/Holborn-640x480.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php 
+                $query = mysqli_query($conn, "SELECT * FROM tb_profil");
+                $no = 1;
+                while($row = mysqli_fetch_assoc($query)):
+                    $no = 0;
+                    if($no % 2 == 1):
+            ?>
+
+                        <section class="spacer bg-light" id="profil">
+                            <div class="container">
+                                <div class="row justify-content-md-center pt-5">
+                                    <div class="col-md-7">
+                                        <img src="admin/temp/profil/<?php echo $row['gambar']; ?>" style="width: 100%; border: 1px solid #ccc; box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45); border-radius: 5px;">
+                                    </div>
+                                    <div class="col-md-5" style="padding-left: 20px;">
+                                        <h1 class="text-dark mt-5" style="font-weight: 600;"><?php echo $row['judul']; ?></h1>
+                                        <p class="mt-4">
+                                            <?php echo $row['keterangan']; ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            <?php else: ?>
+                        <section class="spacer bg-light" id="profil">
+                            <div class="container">
+                                <div class="row justify-content-md-center pt-5">
+                                    <div class="col-md-5">
+                                        <h1 class="text-dark mt-5" style="font-weight: 600;"><?php echo $row['judul']; ?></h1>
+                                        <p class="mt-4">
+                                            <?php echo $row['keterangan']; ?>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <img src="admin/temp/profil/<?php echo $row['gambar']; ?>" alt="Kantor Prudential Sorong" style="width: 100%; border: 1px solid #ccc; box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45); border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            <?php 
+                endif;
+                $no++;
+            endwhile;
+
+            $query = mysqli_query($conn, "SELECT * FROM tb_organisasi");
+            while($row = mysqli_fetch_assoc($query)):
+                if($no % 2 == 1):
+            ?>
+                <section class="spacer bg-light" id="profil">
+                            <div class="container">
+                                <div class="row justify-content-md-center pt-5">
+                                    <div class="col-md-7">
+                                        <img src="admin/temp/struktur/<?php echo $row['gambar']; ?>" style="width: 100%; border: 1px solid #ccc; box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45); border-radius: 5px;">
+                                    </div>
+                                    <div class="col-md-5" style="padding-left: 20px;">
+                                        <h1 class="text-dark mt-5" style="font-weight: 600;"><?php echo $row['nama']; ?></h1>
+                                        <p class="mt-4">
+                                            <?php echo $row['keterangan']; ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                <?php else: ?>
+                    <section class="spacer bg-light" id="profil">
+                            <div class="container">
+                                <div class="row justify-content-md-center pt-5">
+                                    <div class="col-md-5">
+                                        <h1 class="text-dark mt-5" style="font-weight: 600;"><?php echo $row['nama']; ?></h1>
+                                        <p class="mt-4">
+                                            <?php echo $row['keterangan']; ?>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <img src="admin/temp/struktur/<?php echo $row['gambar']; ?>" alt="Kantor Prudential Sorong" style="width: 100%; border: 1px solid #ccc; box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45); border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <?php 
+                endif;
+                $no++;
+            endwhile; ?>
+
             <section class="spacer bg-light">
                 <div class="container">
                     <div class="row justify-content-md-center pt-5">
@@ -196,20 +177,8 @@
                 </div>
             </section>
         </div>
-        <!-- ============================================================== -->
-        <!-- End page wrapperHeader part -->
-        <!-- ============================================================== -->
-        <footer class="text-center p-4">Copyright 2024 <a href="https://prudential.co.id">prudential.co.id</a></footer>
+        <?php include('struktur/pengunjung/layout/footer.php'); ?>
     </div>
-</body>
-<!-- ============================================================== -->
-<!-- All Jquery -->
-<!-- ============================================================== -->
-<script
-    src="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/assets/plugins/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -222,5 +191,3 @@
     });
 
 </script>
-
-</html>

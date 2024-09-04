@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -10,15 +10,22 @@
         content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
-    <title>Admin | Prudential Sorong</title>
+    <meta name="robots" content="noindex,nofollow">
+    <title>Prudential  Sorong (FP One Agency)</title>
+    <!-- <link rel="icon" type="image/png" href="gambar/Logo-Prudential.png"> -->
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../gambar/Logo-Prudential.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="gambar/Logo-Prudential.png">
     <!-- Custom CSS -->
-    <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
-    <!-- Custom CSS -->
-    <link href="css/style.min.css" rel="stylesheet">
-    <link href="css/input.css" rel="stylesheet">
+    <link href="https://wrappixel.com/demos/free-admin-templates/all-lite-landing-pages/dist/css/style.css"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="css/form.css">
+    <style>
+        p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    </style>
 </head>
 
-<body>
+<body style="overflow-x: hidden;">

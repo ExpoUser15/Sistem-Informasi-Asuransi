@@ -1,3 +1,7 @@
+<?php include("config/db.php"); ?>
+<?php
+include("action/session.php");
+?>
 <?php include("struktur/head.php") ?>
 <?php include("layout/navbar.php") ?>
     <section id="main">
@@ -34,7 +38,12 @@
                                 <div class="d-flex gap-10" style="justify-content: space-between; margin-top: 20px;">
                                     <label for="jp">Jenis Produk</label>
                                     <select style="width: 75%;" name="jp">
-                                        <option></option>
+                                        <?php 
+                                            $query = mysqli_query($conn, "SELECT nama FROM tb_produk");
+                                            while($row = mysqli_fetch_assoc($query)):
+                                        ?>
+                                        <option><?php echo $row['nama'] ?></option>
+                                        <?php endwhile; ?>
                                     </select>
                                 </div>
                                 <div class="d-flex gap-10" style="justify-content: space-between; margin-top: 20px;">

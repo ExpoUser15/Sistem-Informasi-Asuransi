@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST['daftar'])) {
     include('../config/db.php');
 
@@ -13,11 +14,13 @@ if (isset($_POST['daftar'])) {
 
     $date = date('Y-m-d', strtotime(str_replace('/', '-', $date)));
 
-    $sql = "INSERT INTO tb_daftar VALUES ('', '$nama', '$nik', '$jk', '$date', '$jp', '$alamat', '$hp', '$email')";
+    $id = $_SESSION['id'];
+
+    $sql = "INSERT INTO tb_daftar VALUES ('', '$nama', '$nik', '$jk', '$date', '$jp', '$alamat', '$hp', '$email', '$id')";
     mysqli_query($conn, $sql);
 
     if (mysqli_affected_rows($conn)) {
-        echo '<script>alert("Daftar Berhasil")
+        echo '<script>alert("Permintaan anda akan diproses, silahkan cek status permintaan.")
             location.href = "../daftar.php?page=daftar";
         </script>';
     } else {

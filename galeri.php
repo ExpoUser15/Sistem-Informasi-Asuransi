@@ -1,40 +1,45 @@
-<?php include("struktur/head.php") ?>
-<?php include("layout/navbar.php") ?>
-<section id="main">
-  <div class="container">
-    <div class="row">
-      <?php include("layout/sidebar.php") ?>
-      <div class="col-md-9">
-        <!-- WEBSITE OVERVIEW  -->
-        <div class="panel panel-default">
-          <div class="panel-heading main-color-bg">
-            <h3 class="panel-title">Galeri Prudential Sorong</h3>
+<div id="main-wrapper">
+  <?php include('struktur/pengunjung/layout/header.php'); ?>
+
+  <div class="content-wrapper" style="padding-top: 60px;">
+
+    <section class="spacer bg-light" id="profil">
+      <div class="">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8">
+            <h1 class="text-dark mt-5" style="font-weight: 600; text-align: center;">Galeri <span
+                class="fw-bold text-danger">Prudential</span> Sorong</h1>
           </div>
-          <div class="panel-body">
-            <div class="d-flex gap-10">
-              <div class="well dash-box" style="max-width: 900px; overflow: hidden;">
-                <img src="gambar/Holborn-640x480.jpg" alt="" style="object-fit: cover; width: 100%;">
-              </div>
-              <div>
-                <h4>Nama Kegiatan</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam id dignissimos neque ab hic asperiores, excepturi perferendis velit quo voluptates et illum inventore cupiditate culpa. Quod iusto commodi iure quis?</p>
-              </div>
+        </div>
+        <div class="row justify-content-md-center pt-5" style="gap: 20px;">
+
+          <div class="col-md-3 bg-white p-0" style="border-radius:6px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45); overflow: hidden;">
+            <img src="gambar/Holborn-640x480.jpg" alt="Kantor Prudential Sorong" style="width: 100%;">
+            <div class="mt-2" style="padding: 15px 40px;">
+              <h3 style="font-weight: 500; color: black;">Title</h3>
+              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum blanditiis optio adipisci illo dicta pariatur doloribus commodi reiciendis quibusdam, asperiores provident ut magni perferendis tempore consequuntur, explicabo error dignissimos!</p>
             </div>
-            <div class="d-flex gap-10">
-              <div class="d-flex" style="flex-direction: column; align-items: end;">
-                <h4 style="text-align: end;">Nama Kegiatan</h4>
-                <p style="text-align: end;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam id dignissimos neque ab hic asperiores, excepturi perferendis velit quo voluptates et illum inventore cupiditate culpa. Quod iusto commodi iure quis?</p>
-              </div>
-              <div class="well dash-box" style="max-width: 900px; overflow: hidden;">
-                <img src="gambar/Holborn-640x480.jpg" alt="" style="object-fit: cover; width: 100%;">
-              </div>
+          </div>
+          <div class="col-md-3 bg-white p-0" style="border-radius:6px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45); overflow: hidden;">
+            <img src="gambar/Holborn-640x480.jpg" alt="Kantor Prudential Sorong" style="width: 100%;">
+            <div class="mt-2" style="padding: 15px 40px;">
+              <h3 style="font-weight: 500; color: black;">Title</h3>
+              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum blanditiis optio adipisci illo dicta pariatur doloribus commodi reiciendis quibusdam, asperiores provident ut magni perferendis tempore consequuntur, explicabo error dignissimos!</p>
+            </div>
+          </div>
+          <div class="col-md-3 bg-white p-0" style="border-radius:6px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45); overflow: hidden;">
+            <img src="gambar/Holborn-640x480.jpg" alt="Kantor Prudential Sorong" style="width: 100%;">
+            <div class="mt-2" style="padding: 15px 40px;">
+              <h3 style="font-weight: 500; color: black;">Title</h3>
+              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum blanditiis optio adipisci illo dicta pariatur doloribus commodi reiciendis quibusdam, asperiores provident ut magni perferendis tempore consequuntur, explicabo error dignissimos!</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-</section>
-
-<?php include("layout/footer.php") ?>
-<?php include("struktur/foot.php") ?>
+  <!-- ============================================================== -->
+  <!-- End page wrapperHeader part -->
+  <!-- ============================================================== -->
+  <?php include('struktur/pengunjung/layout/footer.php'); ?>
+</div>

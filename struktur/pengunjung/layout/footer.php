@@ -1,0 +1,1 @@
+<footer class="text-center p-4">Copyright 2024 <a href="https://prudential.co.id">prudential.co.id</a></footer>

@@ -15,45 +15,7 @@ include('struktur/head.php') ?>
     <div class="page-wrapper">
         <?php include('layout/navbar.php') ?>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="white-box">
-                        <h3 class="box-title">Daftar Produk</h3>
-                        <div class="row d-flex justify-content-center gap-4">
-                            <div class="card col-md-4 border" style="width: 18rem;">
-                                <img src="gambar/activity diagram warga.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nama Produk</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-success text-white">Edit</a>
-                                    <a href="#" class="btn btn-danger text-white">Hapus</a>
-                                </div>
-                            </div>
-                            <div class="card col-md-4 border" style="width: 18rem;">
-                                <img src="gambar/activity diagram warga.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nama Produk</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-success text-white">Edit</a>
-                                    <a href="#" class="btn btn-danger text-white">Hapus</a>
-                                </div>
-                            </div>
-                            <div class="card col-md-4 border" style="width: 18rem;">
-                                <img src="gambar/activity diagram warga.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nama Produk</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-success text-white">Edit</a>
-                                    <a href="#" class="btn btn-danger text-white">Hapus</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#" class="btn btn-primary text-white">Tambah</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php include('action/tambah-produk/tambah_produk.php') ?>
         </div>
     </div>
 </div>
