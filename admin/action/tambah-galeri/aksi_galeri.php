@@ -31,7 +31,7 @@ if($aksi === 'hapus'){
         mysqli_query($conn, "DELETE FROM tb_galeri WHERE id_galeri = '$id'");
     
         if(mysqli_affected_rows($conn)){
-            echo '<script>alert("Produk berhasil dihapus");
+            echo '<script>alert("Galeri berhasil dihapus");
                     location.href = "../../galeri.php";
                 </script>';
         }else{

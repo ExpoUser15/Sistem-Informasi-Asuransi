@@ -8,9 +8,9 @@ switch ($aksi) {
         <div class="row">
             <div class="col-sm-12">
                 <div class="white-box">
-                    <h3 class="box-title">Daftar</h3>
+                    <h3 class="box-title">Galeri</h3>
                     <?php
-                    $query = mysqli_query($conn, "SELECT * FROM tb_daftar");
+                    $query = mysqli_query($conn, "SELECT * FROM tb_galeri");
                     $no = 1;
 
                     while ($row = mysqli_fetch_assoc($query)):
