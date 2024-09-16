@@ -4,7 +4,7 @@
     <div class="scroll-sidebar">
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
-            <a class="navbar-brand ms-2" href="dashboard.php">
+            <a class="navbar-brand ms-2" href="../index.php">
                 <!-- Logo icon -->
                 <b class="logo-icon">
                     <img src="gambar/logo-indonesia.png" alt="homepage" />
@@ -38,6 +38,20 @@
                         aria-expanded="false">
                         <i class="fa fa-image" aria-hidden="true"></i>
                         <span class="hide-menu">Galeri</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="daftar.php"
+                        aria-expanded="false">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        <span class="hide-menu">Daftar</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pembayaran.php"
+                        aria-expanded="false">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        <span class="hide-menu">Pembayaran</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

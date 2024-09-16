@@ -22,7 +22,7 @@ switch ($aksi) {
                                 <?php echo $row['keterangan'] ?>
                             </div>
                             <div class="d-flex justify-content-end gap-2">
-                                <a href="action/tambah-profil/aksi_profil.php?aksi=hapus&id=<?php echo $row['id_profil']; ?>&file=<?php echo $row['gambar']; ?>" class="btn btn-danger text-white">Hapus</a>
+                                <a onclick="return confirm('Apakah anda yakin ingin menghapus?')" href="action/tambah-profil/aksi_profil.php?aksi=hapus&id=<?php echo $row['id_profil']; ?>&file=<?php echo $row['gambar']; ?>" class="btn btn-danger text-white">Hapus</a>
                             </div>
                         <?php endwhile; ?>
                     </div>

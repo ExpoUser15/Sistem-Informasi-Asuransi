@@ -12,28 +12,21 @@
           </div>
         </div>
         <div class="row justify-content-md-center pt-5" style="gap: 20px;">
+        <?php 
+          include('config/db.php');
+            $query = mysqli_query($conn, "SELECT * FROM tb_galeri");
+            while($row = mysqli_fetch_assoc($query)):
+          ?>
 
           <div class="col-md-3 bg-white p-0" style="border-radius:6px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45); overflow: hidden;">
-            <img src="gambar/Holborn-640x480.jpg" alt="Kantor Prudential Sorong" style="width: 100%;">
-            <div class="mt-2" style="padding: 15px 40px;">
-              <h3 style="font-weight: 500; color: black;">Title</h3>
-              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum blanditiis optio adipisci illo dicta pariatur doloribus commodi reiciendis quibusdam, asperiores provident ut magni perferendis tempore consequuntur, explicabo error dignissimos!</p>
+            <img class="image" src="admin/temp/galeri/<?php echo $row['gambar']; ?>" alt="Kantor Prudential Sorong" style="width: 100%; border: 1px solid #ccc; border-radius: 6px; cursor: pointer;" data-id="<?php echo $row['id_galeri']; ?>" data-gambar="admin/temp/galeri/<?php echo $row['gambar']; ?>">
+            <div class="mt-2" style="padding: 15px 40px; overflow-y: auto; max-height: 200px;">
+              <h3 style="font-weight: 500; color: black;"><?php echo $row['judul']; ?></h3>
+              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;"><?php echo $row['keterangan']; ?></p>
             </div>
           </div>
-          <div class="col-md-3 bg-white p-0" style="border-radius:6px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45); overflow: hidden;">
-            <img src="gambar/Holborn-640x480.jpg" alt="Kantor Prudential Sorong" style="width: 100%;">
-            <div class="mt-2" style="padding: 15px 40px;">
-              <h3 style="font-weight: 500; color: black;">Title</h3>
-              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum blanditiis optio adipisci illo dicta pariatur doloribus commodi reiciendis quibusdam, asperiores provident ut magni perferendis tempore consequuntur, explicabo error dignissimos!</p>
-            </div>
-          </div>
-          <div class="col-md-3 bg-white p-0" style="border-radius:6px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45); overflow: hidden;">
-            <img src="gambar/Holborn-640x480.jpg" alt="Kantor Prudential Sorong" style="width: 100%;">
-            <div class="mt-2" style="padding: 15px 40px;">
-              <h3 style="font-weight: 500; color: black;">Title</h3>
-              <p class="mt-2" style="font-size: 0.9rem; font-weight: 400; line-height: 1.4rem;  color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum blanditiis optio adipisci illo dicta pariatur doloribus commodi reiciendis quibusdam, asperiores provident ut magni perferendis tempore consequuntur, explicabo error dignissimos!</p>
-            </div>
-          </div>
+        <?php endwhile; ?>
+
         </div>
       </div>
     </section>

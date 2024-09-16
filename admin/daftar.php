@@ -15,7 +15,7 @@ include('struktur/head.php') ?>
     <div class="page-wrapper">
         <?php include('layout/navbar.php') ?>
         <div class="container-fluid">
-            <?php include('action/tambah-galeri/tambah_galeri.php') ?>
+            <?php include('action/kelola-daftar/kelola_daftar.php') ?>
         </div>
     </div>
 </div>

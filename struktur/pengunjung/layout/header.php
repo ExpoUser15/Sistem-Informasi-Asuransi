@@ -18,21 +18,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item pr-3">
-                            <a href="index.php" class="btn btn-custom btn-outline-info btn-lg">Home</a>
-                        </li>
-                        <?php if($page !== 'galeri' && $page !== 'produk' && $page !== 'register' && $page !== 'login'): ?>
-                            <li class="nav-item pr-3">
-                                <a href="#profil" class="btn btn-custom btn-outline-info btn-lg">Profil</a>
-                            </li>
-                            <li class="nav-item pr-3">
-                                <a href="#kontak" class="btn btn-custom btn-outline-info btn-lg">Kontak</a>
-                            </li>
-                        <?php endif ?>
-                        <li class="nav-item pr-3">
-                            <a href="?page=produk" class="btn btn-custom btn-info btn-lg">Produk</a>
+                            <a href="index.php" class="btn btn-custom btn-lg">Home</a>
                         </li>
                         <li class="nav-item pr-3">
-                            <a href="?page=galeri" class="btn btn-custom btn-info btn-lg">Galeri</a>
+                            <a href="index.php#profil" class="btn btn-custom btn-lg">Profil</a>
+                        </li>
+                        <li class="nav-item pr-3">
+                            <a href="index.php#kontak" class="btn btn-custom btn-lg">Kontak</a>
+                        </li>
+                        <li class="nav-item pr-3">
+                            <a href="?page=produk" class="btn btn-custom btn-lg">Produk</a>
+                        </li>
+                        <li class="nav-item pr-3">
+                            <a href="?page=galeri" class="btn btn-custom btn-lg">Galeri</a>
                         </li>
                         <li class="nav-item pr-3">
                             <a href="?page=login" class="btn btn-custom btn-danger btn-lg">Login</a>

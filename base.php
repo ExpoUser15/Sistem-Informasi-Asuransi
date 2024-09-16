@@ -132,16 +132,15 @@
                     <h1 class="text-dark mt-5" style="font-weight: 600; text-align: center;">Kontak</h1>
                     <div class="row justify-content-md-center pt-5">
                         <div class="col-md-4">
-                            <form class="form">
+                            <form class="form" action="action/kontakAction.php" method="POST">
                                 <div class="title">Butuh bantuan?<br><span>silahkan hubungi kami melalui form dibawah
                                         ini</span></div>
                                 <input type="text" placeholder="Nama" name="nama" class="input">
                                 <input type="email" placeholder="Email" name="email" class="input">
-                                <input type="text" placeholder="No. Handphone" name="no__hp" class="input">
-                                <textarea name="" id="" cols="30" rows="10" class="input"
+                                <input type="text" placeholder="No. Handphone" name="no_hp" class="input">
+                                <textarea name="pesan" id="" cols="30" rows="10" class="input"
                                     placeholder="Pesan"></textarea>
                                 <div class="login-with">
-                                    <div class="button-log"></div>
                                     <div class="button-log">
                                         <svg class="icon" height="56.6934px" id="Layer_1"
                                             style="enable-background:new 0 0 56.6934 56.6934;" version="1.1"
@@ -164,7 +163,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <button class="button-confirm">Kirim</button>
+                                <button class="button-confirm" type="submit" name="submit">Kirim</button>
                             </form>
                         </div>
                         <div class="col-md-8">

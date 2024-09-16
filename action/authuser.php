@@ -17,13 +17,13 @@ if(isset($_POST['submit'])){
         }else{
             echo "<script>
                     alert('Username atau Password salah!');
-                    location.href = '../login.php';
+                    location.href = '../index.php?page=login';
                 </script>";
         }
     }else{
         echo "<script>
                 alert('Username atau Password salah!');
-                location.href = '../login.php';
+                location.href = '../index.php?page=login';
             </script>";
     }
 }

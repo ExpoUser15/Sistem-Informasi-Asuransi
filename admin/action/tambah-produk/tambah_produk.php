@@ -20,7 +20,7 @@ switch ($aksi) {
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row['nama'] ?></h5>
                                         <p class="card-text"><?php echo $row['keterangan'] ?></p>
-                                        <a href="action/tambah-produk/aksi_produk.php?aksi=hapus&id=<?php echo $row['id_produk'] ?>&file=<?php echo $row['gambar'] ?>" class="btn btn-danger text-white">Hapus</a>
+                                        <a onclick="return confirm('Apakah anda yakin ingin menghapus?')" href="action/tambah-produk/aksi_produk.php?aksi=hapus&id=<?php echo $row['id_produk'] ?>&file=<?php echo $row['gambar'] ?>" class="btn btn-danger text-white">Hapus</a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>

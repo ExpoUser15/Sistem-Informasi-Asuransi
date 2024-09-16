@@ -20,6 +20,7 @@
         rel="stylesheet">
         <link rel="stylesheet" href="css/register.css">
         <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/detail.css">
     <style>
         p {
             font-size: 1.2rem;

@@ -6,7 +6,7 @@
             <?php include("layout/sidebar.php") ?>
             <div class="col-md-9">
                 <!-- WEBSITE OVERVIEW  -->
-                <div class="panel panel-default">
+                <form class="panel panel-default" action="action/kontakAction.php" method="POST">
                     <div class="panel-heading main-color-bg">
                         <h3 class="panel-title">Kontak Prudential Sorong</h3>
                         <h3 class="panel-title">Hubungi Kami</h3>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

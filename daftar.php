@@ -15,7 +15,7 @@ include("action/session.php");
                             <h3 class="panel-title">Daftarkan Diri Anda Disini</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="action/daftarAction.php" method="POST">
+                            <form action="action/daftarAction.php" method="POST" enctype="multipart/form-data">
                                 <div class="d-flex gap-10" style="justify-content: space-between;">
                                     <label for="nama">Nama</label>
                                     <input type="text" style="width: 75%;" name="nama">
@@ -39,10 +39,10 @@ include("action/session.php");
                                     <label for="jp">Jenis Produk</label>
                                     <select style="width: 75%;" name="jp">
                                         <?php 
-                                            $query = mysqli_query($conn, "SELECT nama FROM tb_produk");
+                                            $query = mysqli_query($conn, "SELECT nama, id_produk FROM tb_produk");
                                             while($row = mysqli_fetch_assoc($query)):
                                         ?>
-                                        <option><?php echo $row['nama'] ?></option>
+                                        <option value="<?php echo $row['id_produk'] ?>"><?php echo $row['nama'] ?></option>
                                         <?php endwhile; ?>
                                     </select>
                                 </div>
@@ -57,6 +57,14 @@ include("action/session.php");
                                 <div class="d-flex gap-10" style="justify-content: space-between; margin-top: 20px;">
                                     <label for="email">Email</label>
                                     <input type="text" style="width: 75%;" name="email">
+                                </div>
+                                <div class="d-flex gap-10" style="justify-content: space-between; margin-top: 20px;">
+                                    <label for="email">TTD</label>
+                                    <input type="file" style="width: 75%;" name="ttd">
+                                </div>
+                                <div class="d-flex gap-10" style="justify-content: space-between; margin-top: 20px;">
+                                    <label for="email">KTP</label>
+                                    <input type="file" style="width: 75%;" name="ktp">
                                 </div>
                                 <div class="d-flex" style="justify-content: end;">
                                     <button type="submit" class="btn btn-default daftarBtn" style="margin-top: 20px; width: 20%;" name="daftar">Daftar</button>

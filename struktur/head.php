@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/register.css" rel="stylesheet">
+    <link href="css/detail.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 </head>
 

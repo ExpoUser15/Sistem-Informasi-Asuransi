@@ -2,6 +2,7 @@
 session_start();
 if (isset($_POST['daftar'])) {
     include('../config/db.php');
+    include('../action/file_management.php');
 
     $nama = htmlspecialchars(mysqli_real_escape_string($conn, $_POST['nama']));
     $alamat =  htmlspecialchars(mysqli_real_escape_string($conn, $_POST['alamat']));
@@ -12,11 +13,14 @@ if (isset($_POST['daftar'])) {
     $jk =  htmlspecialchars(mysqli_real_escape_string($conn, $_POST['jk']));
     $date =  htmlspecialchars(mysqli_real_escape_string($conn, $_POST['date']));
 
+    $ktp = file_management('../temp/gambar/', 'ktp', '../daftar.php', '../daftar.php');
+    $ttd = file_management('../temp/gambar/', 'ttd', '../daftar.php', '../daftar.php');
+
     $date = date('Y-m-d', strtotime(str_replace('/', '-', $date)));
 
     $id = $_SESSION['id'];
 
-    $sql = "INSERT INTO tb_daftar VALUES ('', '$nama', '$nik', '$jk', '$date', '$jp', '$alamat', '$hp', '$email', '$id')";
+    $sql = "INSERT INTO tb_daftar VALUES ('', '$nama', '$nik', '$jk', '$date', '$jp', '$alamat', '$hp', '$email', '$ktp', '$ttd', 'Proses', '$id')";
     mysqli_query($conn, $sql);
 
     if (mysqli_affected_rows($conn)) {

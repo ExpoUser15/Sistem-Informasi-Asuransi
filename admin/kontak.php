@@ -32,19 +32,26 @@ include('struktur/head.php') ?>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                        include('../config/db.php');
+
+                                        $no = 1;
+                                        $query = mysqli_query($conn, "SELECT * FROM tb_kontak");
+                                        while($row = mysqli_fetch_assoc($query)):
+                                    ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Deshmukh</td>
-                                        <td>Prohaska</td>
-                                        <td>0822130903109</td>
-                                        <td>Hey</td>
+                                        <td><?php echo $no++; ?></td>
+                                        <td><?php echo $row['nama']; ?></td>
+                                        <td><?php echo $row['email']; ?></td>
+                                        <td><?php echo $row['no_hp']; ?></td>
+                                        <td><?php echo $row['pesan']; ?></td>
                                         <td>
                                             <div class="d-flex gap-2">
-                                                <a href="#" class="btn btn-success text-white">Edit</a>
-                                                <a href="#" class="btn btn-danger text-white">Hapus</a>
+                                                <a onclick="return confirm('Apakah anda yakin ingin menghapus?')" href="?kontak=hapus&id=<?php echo $row['id_kontak']; ?>" class="btn btn-danger text-white">Hapus</a>
                                             </div>
                                         </td>
                                     </tr>
+                                    <?php endwhile; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -54,4 +61,22 @@ include('struktur/head.php') ?>
         </div>
     </div>
 </div>
+<?php 
+    $get = @$_GET['kontak'];
+    $id = @$_GET['id'];
+
+    if($get === 'hapus'){
+        mysqli_query($conn, "DELETE FROM tb_kontak WHERE id_kontak = '$id'");
+
+        if(mysqli_affected_rows($conn)){
+            echo '<script>alert("Pesan berhasil dihapus!");
+                location.href = "kontak.php";
+            </script>';
+        }else{
+            echo '<script>alert("Pesan gagal dihapus!");
+                location.href = "kontak.php";
+            </script>';
+        }
+    }
+?>
 <?php include('struktur/footer.php') ?>
